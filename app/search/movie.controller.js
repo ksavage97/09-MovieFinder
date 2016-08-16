@@ -11,14 +11,14 @@
 
     function movieController(movieFactory) {
         var vm = this;
-        vm.searchInput = {};
         vm.inputResults = function(movies) {
             movieFactory.getMovie(movies).then(
                 function(data) {
                     vm.theMovie = data;
+                    console.log(data);
                 },
                 function(error) {});
-            console.log();
+
         };
 
     }

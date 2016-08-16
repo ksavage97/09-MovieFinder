@@ -23,12 +23,12 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
+                <div ng-repeat="movie in movies.theMovie.Search" class="col-md-4">
                     <div class="panel panel-default">
-                        <div class="panel-heading">Movie Title</div>
+                        <div class="panel-heading">{{movie.Title}}</div>
                             <div class="panel-body text-center">
-                            <p><img src=""></p>
-                            <p>Filmed in</p>
+                            <p><img src="{{movie.Poster}}"></p>
+                            <p>Filmed in {{movie.Year}}</p>
                             <p><a href="">Click here to view on IMDB</p>
                             </div>
                         </div>
@@ -37,13 +37,14 @@
             </div>
         </div>
 
+        <pre>{{movies.theMovie | json}}</pre>
+
         <script src="bower_components/angular/angular.js"></script>
         <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
         <script src="app/app.js"></script>
-        <script src="app/movie/movie.controller.js"></script>
-        <script src="app/movie/movie.factory.js"></script>
-        <script src="app/movie/movie.detail.controller.js"></script>
-        <script src="app/movie/movie.service.js"></script>
+        <script src="app/search/movie.controller.js"></script>
+        <script src="app/search/movie.factory.js"></script>
+        <script src="app/detail/movie.detail.controller.js"></script>
     </body>
 
     </html>

@@ -1,1 +1,8 @@
-angular.module('movieApp', []);
+(function() {
+	'use strict';
+
+	angular
+		.module('movieApp', []);
+		
+
+})();

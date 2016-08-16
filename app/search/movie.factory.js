@@ -21,7 +21,7 @@
             var deferred = $q.defer();
 
             //communicating with the api
-            $http.get('http://www.omdbapi.com/?' + movie).then(
+            $http.get('http://www.omdbapi.com/?s=' + movie + '&plot').then(
                 function(response) {
                     deferred.resolve(response.data);
                 },
