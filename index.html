@@ -4,15 +4,44 @@
     <head>
         <title>Movie Finder</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">    
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     </head>
 
-    <body>
+    <body ng-controller="movieController as movies">
+        <h1>Movie Finder</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="input-group">
+                        <input ng-model="movies.searchInput.title" type="text" class="form-control" placeholder="Search for a movie...">
+                        <span class="input-group-btn">
+                    <button ng-click="movies.inputResults(movies.searchInput.title)" class="btn btn-default" type="button">Go!</button>
+                </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Movie Title</div>
+                            <div class="panel-body text-center">
+                            <p><img src=""></p>
+                            <p>Filmed in</p>
+                            <p><a href="">Click here to view on IMDB</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <script src="bower_components/angular/angular.js"></script>
         <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
         <script src="app/app.js"></script>
         <script src="app/movie/movie.controller.js"></script>
+        <script src="app/movie/movie.factory.js"></script>
         <script src="app/movie/movie.detail.controller.js"></script>
         <script src="app/movie/movie.service.js"></script>
     </body>
