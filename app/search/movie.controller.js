@@ -15,12 +15,13 @@
             movieFactory.getMovie(movies).then(
                 function(data) {
                     vm.theMovie = data;
-                    console.log(data);
+                   console.log(data);
                 },
                 function(error) {});
 
         };
 
+        
     }
 
 })();

@@ -18,7 +18,7 @@
                     <div class="panel-body text-center">
                         <p><img src="{{movie.Poster}}"></p>
                         <p>Filmed in {{movie.Year}}</p>
-                        <p><a href="">Click here to view on IMDB</a></p>
+                        <p><a ui-sref="detail({movieId: movie.imdbID })">Click here to view on IMDB</a></p>
                     </div>
                 </div>
             </div>
