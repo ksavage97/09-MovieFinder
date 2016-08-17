@@ -5,11 +5,11 @@
 
     angular
         .module('movieApp')
-        .controller('movieController', movieController);
+        .controller('searchController', searchController);
 
-    movieController.$inject = ['movieFactory'];
+    searchController.$inject = ['movieFactory'];
 
-    function movieController(movieFactory) {
+    function searchController(movieFactory) {
         var vm = this;
         vm.inputResults = function(movies) {
             movieFactory.getMovie(movies).then(

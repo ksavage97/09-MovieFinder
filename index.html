@@ -7,37 +7,11 @@
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     </head>
 
-    <body ng-controller="movieController as movies">
+    <body>
         <h1>Movie Finder</h1>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="input-group">
-                        <input ng-model="movies.searchInput.title" type="text" class="form-control" placeholder="Search for a movie...">
-                        <span class="input-group-btn">
-                    <button ng-click="movies.inputResults(movies.searchInput.title)" class="btn btn-default" type="button">Go!</button>
-                </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div ng-repeat="movie in movies.theMovie.Search" class="col-md-4">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">{{movie.Title}}</div>
-                            <div class="panel-body text-center">
-                            <p><img src="{{movie.Poster}}"></p>
-                            <p>Filmed in {{movie.Year}}</p>
-                            <p><a href="">Click here to view on IMDB</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+     
 
-        <pre>{{movies.theMovie | json}}</pre>
+        <div ui-view></div>
 
         <script src="bower_components/angular/angular.js"></script>
         <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
