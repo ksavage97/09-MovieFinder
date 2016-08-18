@@ -21,7 +21,9 @@
                 vm.movieDetails = data;
                 console.log(data);
             },
-            function(error) {});
+            function(error) {
+                
+            });
     }
 
 })();
