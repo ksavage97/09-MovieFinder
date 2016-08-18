@@ -1,1 +1,17 @@
-<p>{{detail.movieDetails.Plot}}</p>
+<div id="detailContainer" class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <!-- picture -->
+            <img id="detailPoster" src="{{detail.movieDetails.Poster}}">
+        </div>
+        <div class="col-sm-8">
+            <!-- text -->
+            <h2>{{detail.movieDetails.Title}}</h2>
+            <p id="subHead">{{detail.movieDetails.Rated}} | {{detail.movieDetails.Genre}} | {{detail.movieDetails.Year}} | {{detail.movieDetails.Runtime}}</p>
+            <p id="rightSide">{{detail.movieDetails.Plot}}</p>
+            <p class="text-center"><a class="btn allButtons" id="returnButton" ui-sref="search">Return to Search Page</a></p>
+        </div>
+    </div>
+</div>
+</div>
+</div>

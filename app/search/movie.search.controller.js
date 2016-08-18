@@ -1,4 +1,4 @@
-//controller
+//search controller
 
 (function() {
     'use strict';
@@ -7,6 +7,7 @@
         .module('movieApp')
         .controller('searchController', searchController);
 
+    //injecting movie factory to search controller
     searchController.$inject = ['movieFactory'];
 
     function searchController(movieFactory) {
@@ -14,8 +15,9 @@
         vm.inputResults = function(movies) {
             movieFactory.getMovie(movies).then(
                 function(data) {
+                    //first array from search
                     vm.theMovie = data;
-                   console.log(data);
+                    console.log(data);
                 },
                 function(error) {});
 

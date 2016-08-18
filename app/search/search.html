@@ -1,26 +1,28 @@
-       <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="input-group">
-                        <input ng-model="search.searchInput.title" type="text" class="form-control" placeholder="Search for a movie...">
-                        <span class="input-group-btn">
-                    <button ng-click="search.inputResults(search.searchInput.title)" ui-sref="search" class="btn btn-default" type="button">Go!</button>
+<div id="mainContainer" class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <!-- search box -->
+            <div id="searchBoxContainer" class="input-group">
+                <input id="inputBox" ng-model="search.searchInput.title" type="text" class="form-control" placeholder="Search for your favorite movie...">
+                <span class="input-group-btn">
+                    <button id="goButton" ng-click="search.inputResults(search.searchInput.title)" ui-sref="search" class="btn btn-default" type="button">Go!</button>
                 </span>
-                    </div>
-                </div>
             </div>
         </div>
-    <div class="container">
-        <div class="row">
-            <div ng-repeat="movie in search.theMovie.Search" class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">{{movie.Title}}</div>
-                    <div class="panel-body text-center">
-                        <p><img src="{{movie.Poster}}"></p>
-                        <p>Filmed in {{movie.Year}}</p>
-                        <p><a ui-sref="detail({movieId: movie.imdbID })">Click here to view on IMDB</a></p>
-                    </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <!-- panels containing movie results -->
+        <div ng-repeat="movie in search.theMovie.Search" class="col-md-4 col-sm-6">
+            <div id="panelBox" class="panel panel-default">
+                <div class="panel-body text-center">
+                    <p id="movieTitle">{{movie.Title}}</p>
+                    <p><img id="moviePoster" src="{{movie.Poster}}"></p>
+                    <p id="filmedIn">Filmed in {{movie.Year}}</p>
+                    <p><a id="clickHere" class="btn" ui-sref="detail({movieId: movie.imdbID })">Click here for more details!</a></p>
                 </div>
             </div>
         </div>
     </div>
+</div>

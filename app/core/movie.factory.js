@@ -21,7 +21,7 @@
         function getMovie(movie) {
             var deferred = $q.defer();
 
-            //communicating with the api
+            //communicating with the api round 1 - basic search
             $http.get('http://www.omdbapi.com/?s=' + movie + '&plot=full&r=json').then(
                 function(response) {
                     deferred.resolve(response.data);
@@ -31,7 +31,6 @@
                 }
             );
 
-            //returns the array
             return deferred.promise;
         }
 
@@ -39,7 +38,7 @@
         function getDetail(currentMovieID) {
             var deferred = $q.defer();
 
-            //communicating with the api
+            //communicating with the api round 2 - details
             $http.get('http://www.omdbapi.com/?i=' + currentMovieID + '&plot=full&r=json').then(
                 function(response) {
                     deferred.resolve(response.data);
@@ -49,7 +48,6 @@
                 }
             );
 
-            //returns the array
             return deferred.promise;
         }
 

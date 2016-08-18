@@ -1,0 +1,221 @@
+body {
+    background-color: #f19e34;
+    font-family: 'Fredoka One', sans-serif;
+}
+
+
+/* header */
+
+h1 {
+    width: 100%;
+    font-size: 50px;
+    text-align: center;
+    border-bottom: 1px solid black;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, .3), -8px 8px 15px rgba(0, 0, 0, .3);
+    padding: 10px 0;
+    margin-top: 0px;
+    color: white;
+    text-shadow: 4px 4px rgba(0, 0, 0, .7);
+    font-weight: bold;
+    background-color: #cc252a;
+}
+
+
+/* search box */
+
+#searchBoxContainer {
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+
+#inputBox {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+    border: 1px solid black;
+    font-size: 20px;
+    text-shadow: none;
+    height: 40px;
+    line-height: 40px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, .3), -8px 8px 15px rgba(0, 0, 0, .3);
+}
+
+#goButton {
+    height: 40px;
+    background-color: #cc252a;
+    color: white;
+    font-size: 20px;
+    text-shadow: 2px 2px rgba(0, 0, 0, .8);
+    width: 100px;
+    border: 1px solid black;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, .3), 1px 8px 15px rgba(0, 0, 0, .3);
+}
+
+
+/* search result panels */
+
+#panelBox {
+    height: 400px;
+    border: 1px solid black;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, .3), -8px 8px 15px rgba(0, 0, 0, .3);
+}
+
+.panel-default,
+.panel-body {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.panel-default,
+.panel-heading {
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+}
+
+#movieTitle {
+    background-color: #008b50;
+    color: white;
+    font-size: 20px;
+    text-shadow: 2px 2px rgba(0, 0, 0, .8);
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, .3), -8px 8px 15px rgba(0, 0, 0, .3);
+    padding: 8px 0;
+    text-align: center;
+    border: 1px solid black;
+    margin-bottom: 15px;
+}
+
+#moviePoster {
+    height: 200px;
+    width: 150px;
+}
+
+#filmedIn {
+    color: #48464a;
+}
+
+#clickHere {
+    background-color: #cc252a;
+    color: white;
+    font-size: 20px;
+    padding: 3px;
+    border: 1px solid black;
+    text-shadow: 2px 2px rgba(0, 0, 0, .8);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, .3), -4px 4px 15px rgba(0, 0, 0, .3);
+}
+
+
+/* detail page */
+
+#detailContainer {
+    background-color: white;
+    border-radius: 30px;
+    margin-top: 50px;
+    padding-bottom: 10px;
+    width: 90%;
+    border: 1px solid black;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, .3), -8px 8px 15px rgba(0, 0, 0, .3);
+}
+
+#detailPoster {
+    visibility: hidden;
+    width: 1px;
+    height: 1px;
+}
+
+h2 {
+    font-size: 20px;
+    background-color: #48464a;
+    color: white;
+    text-shadow: 2px 2px rgba(0, 0, 0, .8);
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, .3), -8px 8px 15px rgba(0, 0, 0, .3);
+    padding: 8px 0;
+    text-align: center;
+    border: 1px solid black;
+    margin-bottom: 30px;
+}
+
+#subHead {
+    color: #008b50;
+}
+
+#rightSide {
+    text-align: justify;
+}
+
+#returnButton {
+    background-color: #cc252a;
+    color: white;
+    border: 1px solid black;
+    text-shadow: 2px 2px rgba(0, 0, 0, .8);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, .3), -4px 4px 15px rgba(0, 0, 0, .3);
+}
+
+
+/*media queries time */
+
+@media screen and (min-width: 450px) {
+    h1 {
+        font-size: 50px;
+        text-align: right;
+        border-left: 10px solid #cc252a;
+        border-right: 10px solid #cc252a;
+        ;
+        padding-top: 25px;
+        color: white;
+        height: 105px;
+        background-color: #cc252a;
+        background-image: url('http://i.imgur.com/aEp3S2J.png');
+        background-repeat: no-repeat;
+        background-size: 100px 100px;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    #detailContainer {
+        background-color: white;
+        border-radius: 30px;
+        margin-top: 50px;
+        max-width: 600px;
+        border: 1px solid black;
+        box-shadow: 8px 8px 15px rgba(0, 0, 0, .3), -8px 8px 15px rgba(0, 0, 0, .3);
+    }
+    #detailPoster {
+        height: 270px;
+        margin-top: 10px;
+        width: 180px;
+        padding-top: 10px;
+        float: left;
+        visibility: visible;
+    }
+    #returnButton {
+        float: right;
+    }
+}
+
+@media screen and (min-width: 1030px) {
+    h1 {
+        font-size: 110px;
+        border-left: 30px solid #cc252a;
+        border-right: 30px solid #cc252a;
+        padding-top: 40px;
+        color: white;
+        font-weight: bold;
+        height: 205px;
+        background-size: 250px 200px;
+    }
+    #detailContainer {
+        max-width: 800px;
+    }
+    #detailPoster {
+        height: 360px;
+        width: 240px;
+        padding-top: 10px;
+        float: left;
+        visibility: visible;
+    }
+}
